@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC23163B2B864D4A00B5FD2D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ACC4EBEE2B862D1A00CC1A0C /* duty2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duty2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC4EBF12B862D1A00CC1A0C /* duty2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duty2App.swift; sourceTree = "<group>"; };
 		ACC4EBF32B862D1A00CC1A0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		ACC4EBE52B862D1A00CC1A0C = {
 			isa = PBXGroup;
 			children = (
+				AC23163B2B864D4A00B5FD2D /* README.md */,
 				ACC4EBF02B862D1A00CC1A0C /* duty2 */,
 				ACC4EBEF2B862D1A00CC1A0C /* Products */,
 			);
