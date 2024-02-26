@@ -42,7 +42,7 @@ struct AddTransactionView: View {
                 Button(action: {
                     withAnimation(.linear(duration: 0.2)) {
                         let sumFloat: Float = (sum as NSString).floatValue
-                        createTransaction(chet: tChetName, category: category, sum: sumFloat)
+                        _ = createTransaction(chet: tChetName, category: category, sum: sumFloat)
                         allChets = getAllChets()
                         mainChet = getChet(name: "main")
                         allTransactions = getTransactionsForChet(chet: "main")

@@ -40,7 +40,7 @@ struct AddChetView: View {
                     withAnimation(.linear(duration: 0.2)) {
                         if (newChetName != "") {
                             let newChetBalanceFloat: Float = (newChetBalance as NSString).floatValue
-                            createChet(name: newChetName, balance: newChetBalanceFloat)
+                            _ = createChet(name: newChetName, balance: newChetBalanceFloat)
                             allChets = getAllChets()
                             mainChet = getChet(name: "main")
                             newChetName = ""
