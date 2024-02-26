@@ -20,6 +20,9 @@
 		ACC4EC0D2B862DF300CC1A0C /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4EC062B862DF300CC1A0C /* files.swift */; };
 		ACC4EC0F2B862EFD00CC1A0C /* ChetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4EC0E2B862EFD00CC1A0C /* ChetView.swift */; };
 		ACC4EC112B8641BC00CC1A0C /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4EC102B8641BC00CC1A0C /* TopBarView.swift */; };
+		ACDAF3D72B8A570C0060BC93 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAF3D62B8A570C0060BC93 /* TransactionView.swift */; };
+		ACDAF3D92B8A59D70060BC93 /* AddChetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAF3D82B8A59D70060BC93 /* AddChetView.swift */; };
+		ACDAF3DB2B8A5B270060BC93 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAF3DA2B8A5B270060BC93 /* AddTransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		ACC4EC062B862DF300CC1A0C /* files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
 		ACC4EC0E2B862EFD00CC1A0C /* ChetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChetView.swift; sourceTree = "<group>"; };
 		ACC4EC102B8641BC00CC1A0C /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		ACDAF3D62B8A570C0060BC93 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		ACDAF3D82B8A59D70060BC93 /* AddChetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChetView.swift; sourceTree = "<group>"; };
+		ACDAF3DA2B8A5B270060BC93 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 			children = (
 				ACC4EBF12B862D1A00CC1A0C /* duty2App.swift */,
 				ACC4EBF32B862D1A00CC1A0C /* ContentView.swift */,
+				ACDAF3DA2B8A5B270060BC93 /* AddTransactionView.swift */,
+				ACDAF3D82B8A59D70060BC93 /* AddChetView.swift */,
+				ACDAF3D62B8A570C0060BC93 /* TransactionView.swift */,
 				ACC4EC102B8641BC00CC1A0C /* TopBarView.swift */,
 				ACC4EC0E2B862EFD00CC1A0C /* ChetView.swift */,
 				ACC4EC012B862DF300CC1A0C /* chet.json */,
@@ -172,13 +181,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC4EC0F2B862EFD00CC1A0C /* ChetView.swift in Sources */,
+				ACDAF3DB2B8A5B270060BC93 /* AddTransactionView.swift in Sources */,
 				ACC4EC0C2B862DF300CC1A0C /* chet.swift in Sources */,
 				ACC4EBF42B862D1A00CC1A0C /* ContentView.swift in Sources */,
 				ACC4EBF22B862D1A00CC1A0C /* duty2App.swift in Sources */,
 				ACC4EC0B2B862DF300CC1A0C /* transaction.swift in Sources */,
 				ACC4EC0A2B862DF300CC1A0C /* user.swift in Sources */,
+				ACDAF3D92B8A59D70060BC93 /* AddChetView.swift in Sources */,
 				ACC4EC112B8641BC00CC1A0C /* TopBarView.swift in Sources */,
 				ACC4EC0D2B862DF300CC1A0C /* files.swift in Sources */,
+				ACDAF3D72B8A570C0060BC93 /* TransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

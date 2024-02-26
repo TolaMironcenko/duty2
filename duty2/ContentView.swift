@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State public var allChets: [Chet] = getAllChets()
     @State public var mainChet: Chet = getChet(name: "main")
+    @State var allTransactions: [Transaction] = getTransactionsForChet(chet: "main")
     @State var isPresentedAddTransaction: Bool = false
     
     var body: some View {
@@ -24,6 +25,21 @@ struct ContentView: View {
             }
         }
         .padding()
+        
+        Text("All transactions")
+            .font(.headline)
+        ScrollView (.vertical, showsIndicators: false) {
+            if (allTransactions.isEmpty) {
+                Text("No transactions")
+            }
+            VStack (alignment: .center) {
+                ForEach(allTransactions, id: \.id) { transaction in
+                    TransactionView(transaction: transaction)
+                }
+                
+            }
+        }
+        .padding()
         Spacer()
         HStack {
             Spacer()
@@ -31,20 +47,29 @@ struct ContentView: View {
                 isPresentedAddTransaction = true
             }, label: {
                 Text(Image(systemName: "plus"))
-                #if os(macOS)
+#if os(macOS)
                     .padding(10)
-                #elseif os(iOS)
+#elseif os(iOS)
                     .padding()
-                #endif
+#endif
                     .foregroundColor(.white)
             })
             .background(.gray)
             .clipShape(Circle())
+#if os(macOS)
             .popover(isPresented: $isPresentedAddTransaction, content: {
-                Text("hello")
+                AddTransactionView(allChets: $allChets, mainChet: $mainChet, allTransactions: $allTransactions, isPresented: $isPresentedAddTransaction)
+                
+                AddChetView(allChets: $allChets, mainChet: $mainChet, isPresented: $isPresentedAddTransaction)
             })
+#elseif os(iOS)
+            .sheet(isPresented: $isPresentedAddTransaction, content: {
+                AddTransactionView(allChets: $allChets, mainChet: $mainChet, allTransactions: $allTransactions, isPresented: $isPresentedAddTransaction)
+                
+                AddChetView(allChets: $allChets, mainChet: $mainChet, isPresented: $isPresentedAddTransaction)
+            })
+#endif
         }
-        .padding(10)
     }
 }
 
