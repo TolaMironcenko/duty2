@@ -14,30 +14,30 @@ struct ContentView: View {
     @State var isPresentedAddTransaction: Bool = false
     
     var body: some View {
-        TopBarView(mainChet: $mainChet)
+        TopBarView(mainChet: $mainChet, allTransactions: $allTransactions)
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(allChets) { chet in
-                        ChetView(chet: chet, allChets: $allChets, mainChet: $mainChet)
+                        ChetView(chet: chet, allChets: $allChets, mainChet: $mainChet, allTransactions: $allTransactions)
                     }
                 }
             }
         }
         .padding()
         
-        Text("All transactions")
+        Text(String(localized: "all_transactions"))
             .font(.headline)
         ScrollView (.vertical, showsIndicators: false) {
             if (allTransactions.isEmpty) {
-                Text("No transactions")
+                Text(String(localized: "no_transactions"))
             }
             VStack (alignment: .center) {
                 ForEach(allTransactions, id: \.id) { transaction in
                     TransactionView(transaction: transaction)
                 }
-                
             }
+            .frame(minWidth: 400, minHeight: 400)
         }
         .padding()
         Spacer()
@@ -56,6 +56,7 @@ struct ContentView: View {
             })
             .background(.gray)
             .clipShape(Circle())
+            .padding(10)
 #if os(macOS)
             .popover(isPresented: $isPresentedAddTransaction, content: {
                 AddTransactionView(allChets: $allChets, mainChet: $mainChet, allTransactions: $allTransactions, isPresented: $isPresentedAddTransaction)

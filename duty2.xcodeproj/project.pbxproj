@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC95BB5F2B8DE1EA00EC43BA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AC95BB5E2B8DE1EA00EC43BA /* Localizable.xcstrings */; };
 		ACC4EBF22B862D1A00CC1A0C /* duty2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4EBF12B862D1A00CC1A0C /* duty2App.swift */; };
 		ACC4EBF42B862D1A00CC1A0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4EBF32B862D1A00CC1A0C /* ContentView.swift */; };
 		ACC4EBF62B862D1B00CC1A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC4EBF52B862D1B00CC1A0C /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		AC23163B2B864D4A00B5FD2D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AC95BB5E2B8DE1EA00EC43BA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		ACC4EBEE2B862D1A00CC1A0C /* duty2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duty2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC4EBF12B862D1A00CC1A0C /* duty2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duty2App.swift; sourceTree = "<group>"; };
 		ACC4EBF32B862D1A00CC1A0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				ACC4EBF12B862D1A00CC1A0C /* duty2App.swift */,
 				ACC4EBF32B862D1A00CC1A0C /* ContentView.swift */,
+				AC95BB5E2B8DE1EA00EC43BA /* Localizable.xcstrings */,
 				ACDAF3DA2B8A5B270060BC93 /* AddTransactionView.swift */,
 				ACDAF3D82B8A59D70060BC93 /* AddChetView.swift */,
 				ACDAF3D62B8A570C0060BC93 /* TransactionView.swift */,
@@ -149,6 +152,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = ACC4EBE52B862D1A00CC1A0C;
 			productRefGroup = ACC4EBEF2B862D1A00CC1A0C /* Products */;
@@ -167,6 +171,7 @@
 			files = (
 				ACC4EC072B862DF300CC1A0C /* user.json in Resources */,
 				ACC4EC082B862DF300CC1A0C /* chet.json in Resources */,
+				AC95BB5F2B8DE1EA00EC43BA /* Localizable.xcstrings in Resources */,
 				ACC4EC092B862DF300CC1A0C /* transaction.json in Resources */,
 				ACC4EBFA2B862D1B00CC1A0C /* Preview Assets.xcassets in Resources */,
 				ACC4EBF62B862D1B00CC1A0C /* Assets.xcassets in Resources */,
@@ -249,7 +254,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -304,7 +311,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -316,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = duty2/duty2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -324,6 +334,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -354,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = duty2/duty2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -362,6 +374,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

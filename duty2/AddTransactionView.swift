@@ -11,7 +11,7 @@ import SwiftUI
 struct AddTransactionView: View {
     @State var tChetName: String = "main"
     @State var sum: String = "0"
-    @State var category: String = "No Category"
+    @State var category: String = String(localized: "no_category")
     @Binding var allChets: [Chet]
     @Binding var mainChet: Chet
     @Binding var allTransactions: [Transaction]
@@ -21,21 +21,21 @@ struct AddTransactionView: View {
         Form {
             VStack {
                 HStack {
-                    Text("Create new transaction")
+                    Text(String(localized: "add_transaction"))
                         .font(.title)
                 }
                 VStack (alignment: .leading) {
-                    TextField("Chet", text: $tChetName)
+                    TextField(String(localized: "chet_name"), text: $tChetName)
                         .textFieldStyle(.roundedBorder)
                         .disableAutocorrection(true)
                 }
                 VStack (alignment: .leading) {
-                    TextField("Sum", text: $sum)
+                    TextField(String(localized: "sum"), text: $sum)
                         .textFieldStyle(.roundedBorder)
                         .disableAutocorrection(true)
                 }
                 VStack (alignment: .leading) {
-                    TextField("Category", text: $category)
+                    TextField(String(localized: "category"), text: $category)
                         .textFieldStyle(.roundedBorder)
                         .disableAutocorrection(true)
                 }
@@ -48,11 +48,11 @@ struct AddTransactionView: View {
                         allTransactions = getTransactionsForChet(chet: "main")
                         sum = "0"
                         tChetName = ""
-                        category = "No category"
+                        category = String(localized: "no_category")
                         isPresented = false
                     }
                 }) {
-                    (Text(Image(systemName: "plus.circle")) + Text(" Add"))
+                    (Text(Image(systemName: "plus.circle")) + Text(" " + String(localized: "add")))
                         .font(.headline)
                         .padding(5)
                         .frame(maxWidth: .infinity)

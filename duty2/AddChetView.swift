@@ -19,19 +19,19 @@ struct AddChetView: View {
         Form {
             VStack {
                 HStack {
-                    Text("Create new chet")
+                    Text(String(localized: "add_chet"))
                         .font(.title)
                 }
                 VStack(alignment: .leading) {
                     TextField(text: $newChetName) {
-                        Text("Chet name")
+                        Text(String(localized: "chet_name"))
                     }
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)
                 }
                 VStack(alignment: .leading) {
                     TextField(text: $newChetBalance) {
-                        Text("Chet balance")
+                        Text(String(localized: "sum"))
                     }
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)
@@ -48,7 +48,7 @@ struct AddChetView: View {
                         isPresented = false
                     }
                 }) {
-                    (Text(Image(systemName: "plus.circle")) + Text(" Add"))
+                    (Text(Image(systemName: "plus.circle")) + Text(" " + String(localized: "add")))
                         .font(.headline)
                         .padding(5)
                         .frame(maxWidth: .infinity)
