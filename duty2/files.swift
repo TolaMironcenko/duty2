@@ -92,3 +92,7 @@ func createDirectory(dirName: String) {
 func removeDirectory(dirName: String) {
     try? FileManager.default.removeItem(atPath: getDataDirectory() + "data/" + dirName)
 }
+
+func removeDataDirectory() {
+    try? FileManager.default.removeItem(atPath: getDataDirectory())
+}

@@ -33,5 +33,5 @@ struct TopBarView: View {
 }
 
 #Preview {
-    TopBarView(mainChet: .constant(Chet(name: "main", balance: 100)), allTransactions: .constant([Transaction(chet: "main", category: "No category", sum: 10)]))
+    TopBarView(mainChet: .constant(Chet(name: "main", balance: 100)), allTransactions: .constant([Transaction(chet: "main", category: "No category", datetime: getDateTimeNow(), sum: 10)]))
 }

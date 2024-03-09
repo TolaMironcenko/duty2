@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC95BB5F2B8DE1EA00EC43BA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AC95BB5E2B8DE1EA00EC43BA /* Localizable.xcstrings */; };
+		ACA14DC42B9C6E8600D77E1C /* datetime.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA14DC32B9C6E8600D77E1C /* datetime.swift */; };
 		ACC4EBF22B862D1A00CC1A0C /* duty2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4EBF12B862D1A00CC1A0C /* duty2App.swift */; };
 		ACC4EBF42B862D1A00CC1A0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC4EBF32B862D1A00CC1A0C /* ContentView.swift */; };
 		ACC4EBF62B862D1B00CC1A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC4EBF52B862D1B00CC1A0C /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		AC23163B2B864D4A00B5FD2D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AC95BB5E2B8DE1EA00EC43BA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		ACA14DC32B9C6E8600D77E1C /* datetime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datetime.swift; sourceTree = "<group>"; };
 		ACC4EBEE2B862D1A00CC1A0C /* duty2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duty2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC4EBF12B862D1A00CC1A0C /* duty2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duty2App.swift; sourceTree = "<group>"; };
 		ACC4EBF32B862D1A00CC1A0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				ACC4EC062B862DF300CC1A0C /* files.swift */,
 				ACC4EC022B862DF300CC1A0C /* transaction.json */,
 				ACC4EC042B862DF300CC1A0C /* transaction.swift */,
+				ACA14DC32B9C6E8600D77E1C /* datetime.swift */,
 				ACC4EC002B862DF300CC1A0C /* user.json */,
 				ACC4EC032B862DF300CC1A0C /* user.swift */,
 				ACC4EBF52B862D1B00CC1A0C /* Assets.xcassets */,
@@ -187,6 +190,7 @@
 			files = (
 				ACC4EC0F2B862EFD00CC1A0C /* ChetView.swift in Sources */,
 				ACDAF3DB2B8A5B270060BC93 /* AddTransactionView.swift in Sources */,
+				ACA14DC42B9C6E8600D77E1C /* datetime.swift in Sources */,
 				ACC4EC0C2B862DF300CC1A0C /* chet.swift in Sources */,
 				ACC4EBF42B862D1A00CC1A0C /* ContentView.swift in Sources */,
 				ACC4EBF22B862D1A00CC1A0C /* duty2App.swift in Sources */,

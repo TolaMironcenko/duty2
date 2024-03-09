@@ -66,5 +66,5 @@ struct AddTransactionView: View {
 }
 
 #Preview {
-    AddTransactionView(allChets: .constant([Chet(name: "mom", balance: 100)]), mainChet: .constant(Chet(name: "main", balance: 100)), allTransactions: .constant([Transaction(chet: "main", category: "No category", sum: 0)]), isPresented: .constant(true))
+    AddTransactionView(allChets: .constant([Chet(name: "mom", balance: 100)]), mainChet: .constant(Chet(name: "main", balance: 100)), allTransactions: .constant([Transaction(chet: "main", category: "No category", datetime: getDateTimeNow(), sum: 0)]), isPresented: .constant(true))
 }

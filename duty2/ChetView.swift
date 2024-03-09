@@ -48,5 +48,5 @@ struct ChetView: View {
 }
 
 #Preview {
-    ChetView(chet: Chet(name: "mom", balance: 100), allChets: .constant([Chet(name: "mom", balance: 100)]), mainChet: .constant(Chet(name: "main", balance: 100)), allTransactions: .constant([Transaction(chet: "main", category: "No category", sum: 10)]))
+    ChetView(chet: Chet(name: "mom", balance: 100), allChets: .constant([Chet(name: "mom", balance: 100)]), mainChet: .constant(Chet(name: "main", balance: 100)), allTransactions: .constant([Transaction(chet: "main", category: "No category", datetime: getDateTimeNow(), sum: 10)]))
 }

@@ -37,8 +37,8 @@ struct ContentView: View {
                     TransactionView(transaction: transaction)
                 }
             }
-            .frame(minWidth: 400, minHeight: 400)
         }
+        .frame(minWidth: 400, minHeight: 200)
         .padding()
         Spacer()
         HStack {

@@ -3,6 +3,7 @@ import Foundation
 struct Transaction: Codable {
     let chet: String
     let category: String
+    let datetime: String
     let sum: Float
     var id: String = UUID().uuidString
 }
@@ -43,7 +44,7 @@ func getTransactionsForChet(chet: String) -> [Transaction] {
 }
 
 func createTransaction(chet: String, category: String = "No category", sum: Float = 0) -> Transaction {
-    let newTransaction: Transaction = Transaction(chet: chet, category: category, sum: sum)
+    let newTransaction: Transaction = Transaction(chet: chet, category: category, datetime: getDateTimeNow(), sum: sum)
     let transactionsDataString: String = readFromFile(fileName: getDataDirectory() + "data/" + chet + "/transactions")
     var transactions: [Transaction] = []
     do {
@@ -56,7 +57,17 @@ func createTransaction(chet: String, category: String = "No category", sum: Floa
     let transactionsJsonString: String = String(data: transactionsJson, encoding: .utf8)!
     writeInFile(fileName: getDataDirectory() + "data/" + chet + "/transactions", str: transactionsJsonString)
     if (chet != "main") {
-        writeInFile(fileName: getDataDirectory() + "data/main/transactions", str: transactionsJsonString)
+        let mainTransactionsDataString: String = readFromFile(fileName: getDataDirectory() + "data/main/transactions")
+        var mainTransactions: [Transaction] = []
+        do {
+        mainTransactions = try JSONDecoder().decode([Transaction].self, from: mainTransactionsDataString.data(using: .utf8)!)
+        } catch {
+            mainTransactions = []
+        }
+        mainTransactions.append(newTransaction)
+        let mainTransactionsJson = try! JSONEncoder().encode(mainTransactions)
+        let mainTransactionsJsonString: String = String(data: mainTransactionsJson, encoding: .utf8)!
+        writeInFile(fileName: getDataDirectory() + "data/main/transactions", str: mainTransactionsJsonString)
     }
     
     let chetDataString: String = readFromFile(fileName: getDataDirectory() + "data/" + chet + "/chet")

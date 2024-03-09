@@ -13,6 +13,7 @@ func getChet(name: String) -> Chet {
 }
 
 func getAllChets() -> [Chet] {
+//    removeDataDirectory()
     createDataDirectory()
 	var allChetsUrl: [URL]
 
