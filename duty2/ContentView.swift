@@ -34,7 +34,7 @@ struct ContentView: View {
             }
             VStack (alignment: .center) {
                 ForEach(allTransactions, id: \.id) { transaction in
-                    TransactionView(transaction: transaction)
+                    TransactionView(transaction: transaction, allTransactions: $allTransactions)
                 }
             }
         }

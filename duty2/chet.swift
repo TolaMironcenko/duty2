@@ -48,6 +48,17 @@ func createChet(name: String, balance: Float = 0) -> Any {
 		let newChetString: String = String(data: newChetJson, encoding: .utf8)!
 		writeInFile(fileName: getDataDirectory() + "data/" + name + "/chet", str: newChetString)
 		writeInFile(fileName: getDataDirectory() + "data/" + name + "/transactions", str: "")
+        
+        let mainChetDataString: String = readFromFile(fileName: getDataDirectory() + "data/main/chet")
+        var mainChetData: Chet = try! JSONDecoder().decode(Chet.self, from: mainChetDataString.data(using: .utf8)!)
+        
+        mainChetData.balance = mainChetData.balance + balance
+        
+        let mainChetDataJson = try! JSONEncoder().encode(mainChetData)
+        let mainChetJsonString: String = String(data: mainChetDataJson, encoding: .utf8)!
+        
+        writeInFile(fileName: getDataDirectory() + "data/main/chet", str: mainChetJsonString)
+        
 		return newChet
 	} else {
 		print("Chet already exists")
@@ -60,6 +71,30 @@ func deleteChet(name: String) -> Bool {
 		print("You can't delete main chet!")
 		return false
 	} else {
+        let mainChetDataString: String = readFromFile(fileName: getDataDirectory() + "data/main/chet")
+        var mainChetData: Chet = try! JSONDecoder().decode(Chet.self, from: mainChetDataString.data(using: .utf8)!)
+        
+        let delChetDataString: String = readFromFile(fileName: getDataDirectory() + "data/" + name + "/chet")
+        let delChetData: Chet = try! JSONDecoder().decode(Chet.self, from: delChetDataString.data(using: .utf8)!)
+        
+        let delChetTransactionsString: String = readFromFile(fileName: getDataDirectory() + "data/" + name + "/transactions")
+        var delTransactions: [Transaction] = []
+        do {
+            delTransactions = try JSONDecoder().decode([Transaction].self, from: delChetTransactionsString.data(using: .utf8)!)
+        } catch {
+            delTransactions = []
+        }
+        
+        for transaction in delTransactions {
+            _ = deleteTransaction(chet: transaction.chet, id: transaction.id)
+        }
+        
+        mainChetData.balance = mainChetData.balance - delChetData.balance
+        
+        let mainChetDataJson = try! JSONEncoder().encode(mainChetData)
+        let mainChetJsonString: String = String(data: mainChetDataJson, encoding: .utf8)!
+        
+        writeInFile(fileName: getDataDirectory() + "data/main/chet", str: mainChetJsonString)
 		removeDirectory(dirName: name)
 	}
 	return true

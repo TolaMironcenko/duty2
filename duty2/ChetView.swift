@@ -24,8 +24,11 @@ struct ChetView: View {
                     }
                     allChets = getAllChets()
                     mainChet = getChet(name: "main")
+                    allTransactions = getTransactionsForChet(chet: "main")
                 }
             })
+            .background(.red)
+            .cornerRadius(10.0)
             .padding(5)
             .foregroundColor(.white)
 //            Button("Transactions", action: {
